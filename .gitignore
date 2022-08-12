@@ -1,3 +1,4 @@
+/target/
 # Created by https://www.toptal.com/developers/gitignore/api/java
 # Edit at https://www.toptal.com/developers/gitignore?templates=java
 
@@ -7,10 +8,10 @@
 
 # Log file
 *.log
-*.gitignore
+
 # BlueJ files
 *.ctxt
-
+*.idea
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
