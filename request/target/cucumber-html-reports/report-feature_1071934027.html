@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>herokuapp</td>
-            <td>12 ago 2022, 14:32</td>
+            <td>18 ago 2022, 08:19</td>
     </tr>
   </tbody>
 </table>
@@ -128,18 +128,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">karate/request/client.feature</td>
-          <td      class="passed"    >4</td>
+          <td      class="passed"    >13</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">4</td>
+          <td class="total">13</td>
 
           <td  class="passed"    >1</td>
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="2117683400">2.117</td>
+          <td class="duration" data-value="1614323800">1.614</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -270,7 +270,7 @@ As Qa Automation
   </div>
 
   
-  <span class="lead-duration duration">2.117</span>
+  <span class="lead-duration duration">1.614</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
@@ -308,10 +308,35 @@ As Qa Automation
           <div class="step">
         
 <div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def responseGet = read('classpath:karate/request/responseGet.json')</span>
+  
+  <span class="lead-duration duration">0.006</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
   <span class="keyword indention">Given</span>
   <span class="name">path 'users','2'</span>
   
-  <span class="lead-duration duration">0.005</span>
+  <span class="lead-duration duration">0.006</span>
 
 </div>
 
@@ -336,7 +361,7 @@ As Qa Automation
   <span class="keyword indention">When</span>
   <span class="name">method get</span>
   
-  <span class="lead-duration duration">2.112</span>
+  <span class="lead-duration duration">1.526</span>
 
 </div>
 
@@ -353,27 +378,27 @@ As Qa Automation
           <a>Doc string</a>
       </div>
       <div id="msg-5" class="collapse collapsable-details">
-        <pre>14:32:33.053 request:
+        <pre>08:19:21.809 request:
 1 &gt; GET https://reqres.in/api/users/2
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: reqres.in
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
 
-14:32:33.942 response time in milliseconds: 881.41
+08:19:22.509 response time in milliseconds: 694.69
 1 &lt; 200
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Age: 1281
+1 &lt; Age: 4080
 1 &lt; CF-Cache-Status: HIT
-1 &lt; CF-RAY: 739ba33d2f3e7e4d-LAX
+1 &lt; CF-RAY: 73caf0d53c467ea1-LAX
 1 &lt; Cache-Control: max-age=14400
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Date: Fri, 12 Aug 2022 19:32:33 GMT
+1 &lt; Date: Thu, 18 Aug 2022 13:19:22 GMT
 1 &lt; Etag: W/&quot;118-pbdwwFo9SKNhD3Lx5iHJyngpq00&quot;
 1 &lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
 1 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
-1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=1gt6nEAvNJXlB5EXu8prhkj7rD1uNa4rRiKlCIIpwpkqVK002cJJPC1JQeG1DtZJ%2F4%2BvEytaSf876BM7Ev45du%2FwyZ0zTQHV4L6VhkcKgHMFqAv3vO5pdZp58g%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=O2cwV9aUnxaYEqoDDNPN8%2FRNPtM96%2FI0csd%2FkGs%2FtWqA2yYMdvMwMuFdWWF83XcYJye1i%2FxAER%2BTv0T%2BbeJmgIj3t%2FkBvYFXrWATzNn1uWOJ33Bsz4JyL3Yh5w%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 1 &lt; Server: cloudflare
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Vary: Accept-Encoding
@@ -398,6 +423,206 @@ As Qa Automation
   <span class="name">status 200</span>
   
   <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response == responseGet</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">assert response.support.text == &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;</span>
+  
+  <span class="lead-duration duration">0.015</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">assert response.data.email == email</span>
+  
+  <span class="lead-duration duration">0.007</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">assert response.data.id == id</span>
+  
+  <span class="lead-duration duration">0.008</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">assert response.data.first_name == first_name</span>
+  
+  <span class="lead-duration duration">0.007</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">assert response.data.last_name == last_name</span>
+  
+  <span class="lead-duration duration">0.009</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">assert response.data.avatar == avatar</span>
+  
+  <span class="lead-duration duration">0.010</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">assert response.support.url == url2</span>
+  
+  <span class="lead-duration duration">0.011</span>
 
 </div>
 

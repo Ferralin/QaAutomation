@@ -8,8 +8,13 @@ Feature: Service client POST
 
   Scenario: check the service POST Method
     * def requestCreate = {"name": '#(name)',"job": '#(job)'}
+    * def responsePost = read('classpath:karate/request/responsePost.json')
     Given path 'users'
     And request requestCreate
     When method post
     Then status 201
+    And match response == responsePost
+    And assert response.name == name
+    And assert response.job == job
+
 

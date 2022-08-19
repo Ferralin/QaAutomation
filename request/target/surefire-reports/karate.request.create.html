@@ -47,7 +47,7 @@
         
 <div id="nav-type">Scenarios</div>         
         
-<div id="nav-date">2022-08-12 02:32:35 PM</div>        
+<div id="nav-date">2022-08-18 08:19:23 AM</div>        
       
 <div class="nav-container">
 <div class="nav-item passed">
@@ -69,7 +69,7 @@
 <div class="scenario-tags"></div>
 <span class="scenario-keyword">Scenario: [1:9]</span><span class="scenario-name">check the service POST Method </span>
 </div>
-<div class="scenario-time passed">ms: 854</div>
+<div class="scenario-time passed">ms: 895</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="[1:9]bg">
@@ -90,30 +90,37 @@
 <div class="step-ref passed">2</div>
 <div class="step-cell passed">* def requestCreate = {"name": '#(name)',"job": '#(job)'}</div>
 </div>
-<div class="time-cell passed">7</div>
+<div class="time-cell passed">6</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="3">
 <div class="step-ref passed">3</div>
-<div class="step-cell passed">Given path 'users'</div>
+<div class="step-cell passed">* def responsePost = read('classpath:karate/request/responsePost.json')</div>
 </div>
-<div class="time-cell passed">0</div>
+<div class="time-cell passed">4</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="4">
 <div class="step-ref passed">4</div>
-<div class="step-cell passed">And request requestCreate</div>
+<div class="step-cell passed">Given path 'users'</div>
 </div>
 <div class="time-cell passed">0</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="5">
 <div class="step-ref passed">5</div>
+<div class="step-cell passed">And request requestCreate</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
 <div class="step-cell passed">When method post</div>
 </div>
-<div class="time-cell passed">847</div>
+<div class="time-cell passed">859</div>
 </div>
-<div class="preformatted" data-parent="5">14:32:34.171 request:
+<div class="preformatted" data-parent="6">08:19:22.771 request:
 1 &gt; POST https://reqres.in/api/users
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
@@ -123,29 +130,50 @@
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
 {"name":"morpheus","job":"leader"}
 
-14:32:35.012 response time in milliseconds: 839.11
+08:19:23.624 response time in milliseconds: 851.78
 1 &lt; 201
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; CF-Cache-Status: DYNAMIC
-1 &lt; CF-RAY: 739ba34209ad7bcd-LAX
+1 &lt; CF-RAY: 73caf0da3e05525d-LAX
 1 &lt; Connection: keep-alive
 1 &lt; Content-Length: 84
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Date: Fri, 12 Aug 2022 19:32:34 GMT
-1 &lt; Etag: W/"54-ur83YOI54wg89UBoJ5DpV6jce4Y"
+1 &lt; Date: Thu, 18 Aug 2022 13:19:23 GMT
+1 &lt; Etag: W/"54-JkAt0lZx5kdkdM6twe8xjH2ugGw"
 1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
 1 &lt; NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=esURbKPjiYCaxqK2RM8OZ6%2FcMw7%2B6gb9%2Fpkt0KI%2BZhrQG4EZg%2F61%2Bo%2BCBt%2BFzl1rNZY325Y1RUQDxJcpaMnPBMuK64VkYZCbnKVsSlc2tn6FsPBqoY%2BluoFScQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HeieUt0mikZFQFT17RidUF4p5e%2BNjCNLA2D9OKDZucW9zGQo%2BrlQlKdsuEmtj%2FID%2FBuBjodzF%2FGhPypbQOKedtMMsOty072aXJVIRcqy6KwjU%2BhvYMUKc0FmMA%3D%3D"}],"group":"cf-nel","max_age":604800}
 1 &lt; Server: cloudflare
 1 &lt; Via: 1.1 vegur
 1 &lt; X-Powered-By: Express
-{"name":"morpheus","job":"leader","id":"263","createdAt":"2022-08-12T19:32:34.489Z"}</div>
+{"name":"morpheus","job":"leader","id":"263","createdAt":"2022-08-18T13:19:23.470Z"}</div>
 <div class="step-row">
-<div class="step-container" id="6">
-<div class="step-ref passed">6</div>
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
 <div class="step-cell passed">Then status 201</div>
 </div>
 <div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">And match response == responsePost</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">And assert response.name == name</div>
+</div>
+<div class="time-cell passed">13</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">And assert response.job == job</div>
+</div>
+<div class="time-cell passed">13</div>
 </div>
 </div>
 </div>
