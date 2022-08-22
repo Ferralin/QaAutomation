@@ -19,7 +19,7 @@
     <script src="res/bootstrap.min.js" type="text/javascript"></script>
     <script src="res/karate-report.js" type="text/javascript"></script>
     
-<title>karate.request.client</title>
+<title>karate.request.consultClient.client</title>
   
 </head>
   
@@ -47,7 +47,7 @@
         
 <div id="nav-type">Scenarios</div>         
         
-<div id="nav-date">2022-08-20 05:17:28 PM</div>        
+<div id="nav-date">2022-08-22 09:40:58 AM</div>        
       
 <div class="nav-container">
 <div class="nav-item passed">
@@ -59,7 +59,7 @@
 <div id="content">
       
 <div class="page-heading alert alert-primary">
-<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">karate/request/client.feature</span><span class="feature-description">Service client GET | As Qa Automation&#13;
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">karate/request/consultClient/client.feature</span><span class="feature-description">Service client GET | As Qa Automation&#13;
   I want to consult a client&#13;
   To validate the status code and response</span>
 </div>
@@ -69,7 +69,7 @@
 <div class="scenario-tags"></div>
 <span class="scenario-keyword">Scenario: [1:8]</span><span class="scenario-name">Check the service get method </span>
 </div>
-<div class="scenario-time passed">ms: 2138</div>
+<div class="scenario-time passed">ms: 1919</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="[1:8]bg">
@@ -88,45 +88,45 @@
 <div class="step-row">
 <div class="step-container" id="2">
 <div class="step-ref passed">2</div>
-<div class="step-cell passed">* def responseGet = read('classpath:karate/request/responseGet.json')</div>
+<div class="step-cell passed">* def responseGet = read('classpath:karate/request/consultClient/responseGet_schemas.json')</div>
 </div>
-<div class="time-cell passed">4</div>
+<div class="time-cell passed">5</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="3">
 <div class="step-ref passed">3</div>
 <div class="step-cell passed">Given path 'users','2'</div>
 </div>
-<div class="time-cell passed">3</div>
+<div class="time-cell passed">4</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="4">
 <div class="step-ref passed">4</div>
 <div class="step-cell passed">When method get</div>
 </div>
-<div class="time-cell passed">2033</div>
+<div class="time-cell passed">1813</div>
 </div>
-<div class="preformatted" data-parent="4">17:17:27.107 request:
+<div class="preformatted" data-parent="4">09:40:56.164 request:
 1 &gt; GET https://reqres.in/api/users/2
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: reqres.in
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
 
-17:17:28.217 response time in milliseconds: 1102.54
+09:40:57.074 response time in milliseconds: 900.96
 1 &lt; 200
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Age: 5311
+1 &lt; Age: 2374
 1 &lt; CF-Cache-Status: HIT
-1 &lt; CF-RAY: 73de7fc718f07e92-LAX
+1 &lt; CF-RAY: 73ec5dc3fc9e5355-LAX
 1 &lt; Cache-Control: max-age=14400
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Date: Sat, 20 Aug 2022 22:17:26 GMT
+1 &lt; Date: Mon, 22 Aug 2022 14:40:54 GMT
 1 &lt; Etag: W/"118-pbdwwFo9SKNhD3Lx5iHJyngpq00"
 1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
 1 &lt; NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TOZS0omGxtV7n%2BQbzrPdOcYHIJUyrIp1lIbNkz9Kijua74x1VJp4c2Oil5rSLnH6V3zYJvrwanWEWAkyEaKqQbwyS%2BVXwOVA8a%2Fk8NT5XValzARwClxkPkpyhg%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=06rDmIe28xaqTQAT7E4ShIIpVwCMeOMWAEHGL2wS%2BCZh0Vqw4hjznfcTPqa10JsnfJQSnwoO1tydeJBufPUB7Ooabb2bz8askKbrjCej7CXYIPK9wxseK0wPWQ%3D%3D"}],"group":"cf-nel","max_age":604800}
 1 &lt; Server: cloudflare
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Vary: Accept-Encoding
@@ -145,56 +145,56 @@
 <div class="step-ref passed">6</div>
 <div class="step-cell passed">And match response == responseGet</div>
 </div>
-<div class="time-cell passed">5</div>
+<div class="time-cell passed">4</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="7">
 <div class="step-ref passed">7</div>
 <div class="step-cell passed">And assert response.support.text == "To keep ReqRes free, contributions towards server costs are appreciated!"</div>
 </div>
-<div class="time-cell passed">20</div>
+<div class="time-cell passed">21</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="8">
 <div class="step-ref passed">8</div>
 <div class="step-cell passed">And assert response.data.email == email</div>
 </div>
-<div class="time-cell passed">13</div>
+<div class="time-cell passed">10</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="9">
 <div class="step-ref passed">9</div>
 <div class="step-cell passed">And assert response.data.id == id</div>
 </div>
-<div class="time-cell passed">12</div>
+<div class="time-cell passed">10</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="10">
 <div class="step-ref passed">10</div>
 <div class="step-cell passed">And assert response.data.first_name == first_name</div>
 </div>
-<div class="time-cell passed">14</div>
+<div class="time-cell passed">11</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="11">
 <div class="step-ref passed">11</div>
 <div class="step-cell passed">And assert response.data.last_name == last_name</div>
 </div>
-<div class="time-cell passed">11</div>
+<div class="time-cell passed">12</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="12">
 <div class="step-ref passed">12</div>
 <div class="step-cell passed">And assert response.data.avatar == avatar</div>
 </div>
-<div class="time-cell passed">13</div>
+<div class="time-cell passed">14</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="13">
 <div class="step-ref passed">13</div>
 <div class="step-cell passed">And assert response.support.url == url2</div>
 </div>
-<div class="time-cell passed">10</div>
+<div class="time-cell passed">13</div>
 </div>
 </div>
 </div>

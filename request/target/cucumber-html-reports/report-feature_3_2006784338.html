@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 
   
-<title>Cucumber Reports  - Feature: karate/request/client.feature</title>
+<title>Cucumber Reports  - Feature: karate/request/createClient/create.feature</title>
 
 </head>
 <body>
@@ -127,19 +127,19 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">karate/request/client.feature</td>
-          <td      class="passed"    >13</td>
+          <td class="tagname">karate/request/createClient/create.feature</td>
+          <td      class="passed"    >10</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">13</td>
+          <td class="total">10</td>
 
           <td  class="passed"    >1</td>
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="1614323800">1.614</td>
+          <td class="duration" data-value="862189700">0.862</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -174,14 +174,14 @@ $(document).ready(function() {
         
 <div class="brief passed">
   <span class="keyword indention">Feature</span>
-  <span class="name">karate/request/client.feature</span>
+  <span class="name">karate/request/createClient/create.feature</span>
   
 
   </div>
 
-        <div class="description indention">Service client get
-As Qa Automation
-  I want to consult a client
+        <div class="description indention">Service client POST
+AS QA Automation
+  I want to create a client
   To validate the status code and response</div>
 
         <div class="elements inner-level">
@@ -270,14 +270,14 @@ As Qa Automation
   </div>
 
   
-  <span class="lead-duration duration">1.614</span>
+  <span class="lead-duration duration">0.862</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
     
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Check the service get method</span>
+  <span class="name">check the service POST Method</span>
   
 
        <i class="chevron fa fa-fw"></i>
@@ -309,9 +309,34 @@ As Qa Automation
         
 <div class="brief passed">
   <span class="keyword indention">*</span>
-  <span class="name">def responseGet = read('classpath:karate/request/responseGet.json')</span>
+  <span class="name">def requestCreate = {&quot;name&quot;: '#(name)',&quot;job&quot;: '#(job)'}</span>
   
-  <span class="lead-duration duration">0.006</span>
+  <span class="lead-duration duration">0.008</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def responsePost = read('classpath:karate/request/createClient/responsePost_schemas.json')</span>
+  
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
@@ -334,93 +359,7 @@ As Qa Automation
         
 <div class="brief passed">
   <span class="keyword indention">Given</span>
-  <span class="name">path 'users','2'</span>
-  
-  <span class="lead-duration duration">0.006</span>
-
-</div>
-
-        
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method get</span>
-  
-  <span class="lead-duration duration">1.526</span>
-
-</div>
-
-        
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-5" class="collapse collapsable-details">
-        <pre>08:19:21.809 request:
-1 &gt; GET https://reqres.in/api/users/2
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: reqres.in
-1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
-
-08:19:22.509 response time in milliseconds: 694.69
-1 &lt; 200
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Age: 4080
-1 &lt; CF-Cache-Status: HIT
-1 &lt; CF-RAY: 73caf0d53c467ea1-LAX
-1 &lt; Cache-Control: max-age=14400
-1 &lt; Connection: keep-alive
-1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Date: Thu, 18 Aug 2022 13:19:22 GMT
-1 &lt; Etag: W/&quot;118-pbdwwFo9SKNhD3Lx5iHJyngpq00&quot;
-1 &lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
-1 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
-1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=O2cwV9aUnxaYEqoDDNPN8%2FRNPtM96%2FI0csd%2FkGs%2FtWqA2yYMdvMwMuFdWWF83XcYJye1i%2FxAER%2BTv0T%2BbeJmgIj3t%2FkBvYFXrWATzNn1uWOJ33Bsz4JyL3Yh5w%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
-1 &lt; Server: cloudflare
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Vary: Accept-Encoding
-1 &lt; Via: 1.1 vegur
-1 &lt; X-Powered-By: Express
-{&quot;data&quot;:{&quot;id&quot;:2,&quot;email&quot;:&quot;janet.weaver@reqres.in&quot;,&quot;first_name&quot;:&quot;Janet&quot;,&quot;last_name&quot;:&quot;Weaver&quot;,&quot;avatar&quot;:&quot;https://reqres.in/img/faces/2-image.jpg&quot;},&quot;support&quot;:{&quot;url&quot;:&quot;https://reqres.in/#support-heading&quot;,&quot;text&quot;:&quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;}}</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
+  <span class="name">path 'users'</span>
   
   <span class="lead-duration duration">0.000</span>
 
@@ -445,9 +384,95 @@ As Qa Automation
         
 <div class="brief passed">
   <span class="keyword indention">And</span>
-  <span class="name">match response == responseGet</span>
+  <span class="name">request requestCreate</span>
   
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+  
+  <span class="lead-duration duration">0.827</span>
+
+</div>
+
+        
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>09:40:57.327 request:
+1 &gt; POST https://reqres.in/api/users
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 34
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+{&quot;name&quot;:&quot;morpheus&quot;,&quot;job&quot;:&quot;leader&quot;}
+
+09:40:58.148 response time in milliseconds: 819.81
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 73ec5dc90da37eab-LAX
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 84
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Mon, 22 Aug 2022 14:40:55 GMT
+1 &lt; Etag: W/&quot;54-lM15qs3gPBqQfmwbFCKfNgJLgB8&quot;
+1 &lt; Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+1 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=5MebwYmT7M0M%2BQnm151%2FsHo3Sp9aZIEtRnaQ1P8V7%2BwWIQz%2BPJLtqeI4bySLVjpYW8obyXcZxxv7noHqMincB022JNRyjg4IabGMs68aWp8oNZyP7MmdN03BSQ%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; Server: cloudflare
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{&quot;name&quot;:&quot;morpheus&quot;,&quot;job&quot;:&quot;leader&quot;,&quot;id&quot;:&quot;155&quot;,&quot;createdAt&quot;:&quot;2022-08-22T14:40:55.435Z&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+        
+
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 201</span>
+  
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -470,9 +495,9 @@ As Qa Automation
         
 <div class="brief passed">
   <span class="keyword indention">And</span>
-  <span class="name">assert response.support.text == &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;</span>
+  <span class="name">match response == responsePost</span>
   
-  <span class="lead-duration duration">0.015</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -495,82 +520,7 @@ As Qa Automation
         
 <div class="brief passed">
   <span class="keyword indention">And</span>
-  <span class="name">assert response.data.email == email</span>
-  
-  <span class="lead-duration duration">0.007</span>
-
-</div>
-
-        
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">assert response.data.id == id</span>
-  
-  <span class="lead-duration duration">0.008</span>
-
-</div>
-
-        
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">assert response.data.first_name == first_name</span>
-  
-  <span class="lead-duration duration">0.007</span>
-
-</div>
-
-        
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">assert response.data.last_name == last_name</span>
+  <span class="name">assert response.name == name</span>
   
   <span class="lead-duration duration">0.009</span>
 
@@ -595,34 +545,9 @@ As Qa Automation
         
 <div class="brief passed">
   <span class="keyword indention">And</span>
-  <span class="name">assert response.data.avatar == avatar</span>
+  <span class="name">assert response.job == job</span>
   
   <span class="lead-duration duration">0.010</span>
-
-</div>
-
-        
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-        
-
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">assert response.support.url == url2</span>
-  
-  <span class="lead-duration duration">0.011</span>
 
 </div>
 

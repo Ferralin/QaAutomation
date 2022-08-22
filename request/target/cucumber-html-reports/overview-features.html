@@ -51,7 +51,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                23,
+                59,
                 0,
                 0,
                 0,
@@ -94,7 +94,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 23) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 59) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -107,7 +107,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                2,
+                5,
                 0
             ],
             backgroundColor: [
@@ -144,7 +144,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 5) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -157,7 +157,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   2,
+                   5,
                    0
                ],
                backgroundColor: [
@@ -191,7 +191,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 2) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 5) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -231,8 +231,8 @@ $(document).ready(function() {
   </thead>
   <tbody>
     <tr class="info">
-      <td>herokuapp</td>
-            <td>18 ago 2022, 08:19</td>
+      <td>Test</td>
+            <td>22 ago 2022, 09:40</td>
     </tr>
   </tbody>
 </table>
@@ -344,7 +344,24 @@ $(document).ready(function() {
         <td class="passed">Passed</td>
       </tr>
           <tr>
-        <td class="tagname"><a href="report-feature_1_1850955388.html">karate/request/create.feature</a></td>
+        <td class="tagname"><a href="report-feature_1_121143491.html">karate/request/consultClient/client.feature</a></td>
+
+        <td      class="passed"    >13</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">13</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1918684500">1.918</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_2_1850955388.html">karate/request/create.feature</a></td>
 
         <td      class="passed"    >10</td>
         <td >0</td>
@@ -360,24 +377,58 @@ $(document).ready(function() {
         <td class="duration" data-value="895337600">0.895</td>
         <td class="passed">Passed</td>
       </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_3_2006784338.html">karate/request/createClient/create.feature</a></td>
+
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="862189700">0.862</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_4_3108919727.html">src/test/resources/karate/request/client.feature</a></td>
+
+        <td      class="passed"    >13</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">13</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2148646700">2.148</td>
+        <td class="passed">Passed</td>
+      </tr>
       </tbody>
 
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>23</td>
+      <td>59</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>23</td>
+      <td>59</td>
 
-      <td>2</td>
+      <td>5</td>
       <td>0</td>
-      <td>2</td>
+      <td>5</td>
 
-      <td class="duration">2.509</td>
-      <td>2</td>
+      <td class="duration">7.439</td>
+      <td>5</td>
     </tr>
     <tr>
       <td></td>
