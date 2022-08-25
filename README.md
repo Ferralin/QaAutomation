@@ -11,22 +11,19 @@ Here you can see the cucumber generated report of these files http://localhost:6
 
 # Requirements
 * Clone the repository
-* Clone it through gitbash, githubDESK or any git tool.
 * Have java 8 1.8 installed.
 * IntellijIdea must be installed.
 * Have Gitbash installed.
 * Have Postman installed.
 * To have generated the environment variables.
 * To have Maven installed.
-* To have Gradle installed.
-* maven environment variable: https://youtu.be/o6tr2tdFrJI
-* maven environment variable: https://youtu.be/uqqEAjMQCdU
+
 
 
 # How to see it
-Para ello podemos ingresar al apartado de github "code" y clonar el repositorio, posteriormente podemos ir a la terminal de gitbash y dirigirnos a la carpeta que lo vamos a clonar y con el comando git clone "url", seremos capaces de clonar el repositorio.
-After having installed intellijIDE "https://www.jetbrains.com/es-es/idea/download/#section=windows", we will proceed to open the project, inside intellijIdea we will go to "file", "open" and we will go to the folder where this cloned project is located.
+To do this we can enter the github section "code" and clone the repository, then we can go to the gitbash terminal and go to the folder we are going to clone and with the command git clone "url", we can clone the repository.
+After having installed intellijIDE, we will proceed to open the project, inside intellijIdea we will go to "file", "open" and we will go to the folder where this cloned project is located.
 The class that we are going to compile is called "AllFeatureTests". This class will compile the two classes "get and post" together and will generate an html type report.
-In case we get an error because we have another java version, we can go to the "edit configurations" section and we can proceed to change to java 8 1.8 and in case we don't have this version, here you can find it and install it: https://youtu.be/jxe4vWj-pB8.
+In case we get an error because we have another java version, we can go to the "edit configurations" section and we can proceed to change to java 8 1.8 and in case we don't have this version, you will need to install java 8 version 1.8.
 Then we are going to see the generated report, for this we have to go to intellijIdea and locate the folder "target" that will be positioned in project in the left panel and we will proceed to extend its options, we will open its folders and we will open the folder .js, then locate the .html file called "overview-features.html", we will right click "open in">"open in browser" and choose our browser of preference and so we could see the generated cucumber report.
 👾
