@@ -6,8 +6,6 @@ The automation was performed in the "Intellij IDEA" environment, where two endPo
 This branch called "Develop" contains a project of Intellij Idea type, inside this project we have a folder called "request", inside it we can follow the following path to get to the Get method "src>test>resources>karate>request>consulClient>client.feature", there we can observe the get method where inside you will find the Gherking language that indicates the query of a client and asserts to verify the information of the responseBody
 And in the same path we can find another feature called "create client", inside it we can find some instructions in gherking language and asserts that will help us to verify the content, we also have a .json file, where we will find some kind of sensitive data that we could not show in front.
 
-# Demo 
-Here you can see the cucumber generated report of these files http://localhost:63342/request/reqrest/target/cucumber-html-reports/overview-features.html?_ijt=vstlvk3li677ltm1n5hhb85er7&_ij_reload=RELOAD_ON_SAVE
 
 # Requirements
 * Clone the repository
