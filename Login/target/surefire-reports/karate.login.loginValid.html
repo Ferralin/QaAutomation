@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>karate.login.loginValid</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">3</div>
+            
+<div class="bg-danger" id="nav-fail">1</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2022-08-25 10:58:18 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item failed">
+<a href="#[1:10]">[1:10] check the service POST method </a>
+</div>
+<div class="nav-item passed">
+<a href="#[2.1:29]">[2.1:29] check the service POST method whit users a not exist </a>
+</div>
+<div class="nav-item passed">
+<a href="#[2.2:30]">[2.2:30] check the service POST method whit users a not exist </a>
+</div>
+<div class="nav-item passed">
+<a href="#[2.3:31]">[2.3:31] check the service POST method whit users a not exist </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">karate/login/loginValid.feature</span><span class="feature-description">Service client POST | AS QA Automation&#13;
+  I want to login successful&#13;
+  To validate the status code and response</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:10]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:10]</span><span class="scenario-name">check the service POST method </span>
+</div>
+<div class="scenario-time failed">ms: 3120</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:10]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:10]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* url url</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">* def requestCreate = {"email": "#(email)", "password": "#(password)"}</div>
+</div>
+<div class="time-cell passed">9</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">* def requestBody = read ('classpath:karate/login/responsebody.json')</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">Given path 'login'</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">And request requestCreate</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">3103</div>
+</div>
+<div class="preformatted" data-parent="6">22:58:14.361 request:
+1 &gt; POST https://reqres.in/api/login
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 45
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+{"email":"#(email)","password":"#(password)"}
+
+22:58:15.610 response time in milliseconds: 1244.09
+1 &lt; 400
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 7409a5df6f437e1c-LAX
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 26
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 26 Aug 2022 03:58:15 GMT
+1 &lt; Etag: W/"1a-EGIcyP6BIiCXl5Gb1aph5CGf4VQ"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=H8%2Ba6HD%2FYWl5U0DZH3BbNFj1GcXEGL6F6skVZtl2dvHoHzZPjKV1IkOfrJbZgqxEtEspv4%2BPz3Gd8Bjz1hqerl0Tg5yE9i6dlAkAzPmcX4oDhse6hJFU67ZCnw%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{"error":"user not found"}</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref failed">7</div>
+<div class="step-cell failed">Then status 200</div>
+</div>
+<div class="time-cell failed">1</div>
+</div>
+<div class="preformatted" data-parent="7">22:58:15.614 status code was: 400, expected: 200, response time: 1244, url: https://reqres.in/api/login, response: {"error":"user not found"}
+loginValid.feature:16 - status code was: 400, expected: 200, response time: 1244, url: https://reqres.in/api/login, response: {"error":"user not found"}</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2.1:29]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [2.1:29]</span><span class="scenario-name">check the service POST method whit users a not exist </span>
+</div>
+<div class="scenario-time passed">ms: 786</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[2.1:29]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[2.1:29]bg">
+<div class="step-container" id="8">
+<div class="step-ref bg-step">8</div>
+<div class="step-cell passed">* url url</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">* def requestCreate = {"email": "#(email)", "password": "#(password)"}</div>
+</div>
+<div class="time-cell passed">11</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">* def responsePost = {"token": 'user not found'}</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">Given path 'login'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">And request requestCreate</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">And params { "email" : @#, "password": @@ }</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">773</div>
+</div>
+<div class="preformatted" data-parent="14">22:58:15.737 request:
+1 &gt; POST https://reqres.in/api/login?email=%40%23&amp;password=%40%40
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 30
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+{"email":"@#","password":"@@"}
+
+22:58:16.505 response time in milliseconds: 764.67
+1 &lt; 400
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 7409a5e51bd4db6e-LAX
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 26
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 26 Aug 2022 03:58:16 GMT
+1 &lt; Etag: W/"1a-EGIcyP6BIiCXl5Gb1aph5CGf4VQ"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FmHdpDSQFHgjaVxOqmILfKd8RFwjnXfutEVKnmasdMfxoQBDOEgiplW3KhLjy6kgJLiPyMzxw4dawF6kjjBpc8QTYTkTczhTGQh4yWoP5alMN25z8x6WapbmwA%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{"error":"user not found"}</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">Then status 400</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2.2:30]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [2.2:30]</span><span class="scenario-name">check the service POST method whit users a not exist </span>
+</div>
+<div class="scenario-time passed">ms: 694</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[2.2:30]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[2.2:30]bg">
+<div class="step-container" id="16">
+<div class="step-ref bg-step">16</div>
+<div class="step-cell passed">* url url</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">* def requestCreate = {"email": "#(email)", "password": "#(password)"}</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref passed">18</div>
+<div class="step-cell passed">* def responsePost = {"token": 'user not found'}</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref passed">19</div>
+<div class="step-cell passed">Given path 'login'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref passed">20</div>
+<div class="step-cell passed">And request requestCreate</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref passed">21</div>
+<div class="step-cell passed">And params { "email" : pppp, "password": ppp }</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref passed">22</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">691</div>
+</div>
+<div class="preformatted" data-parent="22">22:58:16.523 request:
+1 &gt; POST https://reqres.in/api/login?email=pppp&amp;password=ppp
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 33
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+{"email":"pppp","password":"ppp"}
+
+22:58:17.211 response time in milliseconds: 681.54
+1 &lt; 400
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 7409a5ea6f8e5367-LAX
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 26
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 26 Aug 2022 03:58:16 GMT
+1 &lt; Etag: W/"1a-EGIcyP6BIiCXl5Gb1aph5CGf4VQ"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Uz7ocS4MyR0upEr3db4JqCIxlahSZYLxLNkDyj%2FQmeW49YeS7Ub6AjeHfbaig6Z21sqxjduL4fhIiTscvLtz4CCcY88ZFdsaIBjK0oyszqbzsgmcRUBc6leXBw%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{"error":"user not found"}</div>
+<div class="step-row">
+<div class="step-container" id="23">
+<div class="step-ref passed">23</div>
+<div class="step-cell passed">Then status 400</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2.3:31]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario Outline: [2.3:31]</span><span class="scenario-name">check the service POST method whit users a not exist </span>
+</div>
+<div class="scenario-time passed">ms: 824</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[2.3:31]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[2.3:31]bg">
+<div class="step-container" id="24">
+<div class="step-ref bg-step">24</div>
+<div class="step-cell passed">* url url</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="25">
+<div class="step-ref passed">25</div>
+<div class="step-cell passed">* def requestCreate = {"email": "#(email)", "password": "#(password)"}</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="26">
+<div class="step-ref passed">26</div>
+<div class="step-cell passed">* def responsePost = {"token": 'user not found'}</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="27">
+<div class="step-ref passed">27</div>
+<div class="step-cell passed">Given path 'login'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="28">
+<div class="step-ref passed">28</div>
+<div class="step-cell passed">And request requestCreate</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="29">
+<div class="step-ref passed">29</div>
+<div class="step-cell passed">And params { "email" : "", "password": "" }</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="30">
+<div class="step-ref passed">30</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">814</div>
+</div>
+<div class="preformatted" data-parent="30">22:58:17.288 request:
+1 &gt; POST https://reqres.in/api/login?email=&amp;password=
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 34
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: reqres.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+{"email":"\"\"","password":"\"\""}
+
+22:58:18.096 response time in milliseconds: 805.22
+1 &lt; 400
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 7409a5eeeedc7cc7-LAX
+1 &lt; Connection: keep-alive
+1 &lt; Content-Length: 26
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Fri, 26 Aug 2022 03:58:17 GMT
+1 &lt; Etag: W/"1a-EGIcyP6BIiCXl5Gb1aph5CGf4VQ"
+1 &lt; Expect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+1 &lt; NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dCoXllstnFoNQGUgdXojObvY%2BltcbsQxwGk7EvDHSgJFgBTYs487YLmxM7IHaptVmwEUsOxy9ghYcseZNheJQIrX4UjXVGeKVGvysGgbQcC664fP%2BU%2BtW6xNnA%3D%3D"}],"group":"cf-nel","max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Via: 1.1 vegur
+1 &lt; X-Powered-By: Express
+{"error":"user not found"}</div>
+<div class="step-row">
+<div class="step-container" id="31">
+<div class="step-ref passed">31</div>
+<div class="step-cell passed">Then status 400</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>
